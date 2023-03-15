@@ -36,6 +36,6 @@ button,
   @include transitionsall;
 
   @include hover {
-    background-size: 100% 50%;
+    background-size: 50% 100%;
   }
 }
