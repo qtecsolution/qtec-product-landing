@@ -26,6 +26,7 @@ button,
 .btn-buy {
   @include setBgColor($btnbg, $white);
   background-size: 100% 100%;
+  background-position: right bottom;
   @include radius(8);
   display: inline-block;
   font-size: size(14);
