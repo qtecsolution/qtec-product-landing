@@ -3,177 +3,51 @@
 
 .header {
   background: $white;
-  @include border-single(bottom, solid, 1, $sideborder);
-  height: size(60);
-  @include flex-center-between;
-  padding: 0 size(24);
+  box-shadow: $headershadow;
+  height: size(100);
+  @include flex-center-vert;
 
-  .headertitle {
-    color: $darktext;
-    font-size: size(16);
-    font-weight: 500;
+  &-nav {
+    @include flex-center-between;
 
-    @include breakpoint(tab992) {
-      font-size: size(18);
+    .desktoplist {
+      @include list-horizontal;
+      gap: size(1);
+
+      &-link {
+        color: $headingcolor;
+        font-size: size(14);
+        font-weight: 700;
+        padding: size(20);
+        letter-spacing: size(1.6);
+        text-transform: uppercase;
+        @include transitionscolor;
+
+        &:hover:not(.active) {
+          color: $buttonbg;
+        }
+
+        &.active {
+          color: $buttonbg;
+        }
+      }
     }
   }
 
-  .userlist {
-    @include list-horizontal;
-    gap: size(12);
+  .btn-hamburger {
+    @include square(40);
+    @include transparent-button;
+    background: $buttonbg;
+    @include flex-center;
+    overflow: hidden;
+    padding: size(8);
+    @include radius(4);
 
-    .user-dropdown {
-      cursor: pointer;
-      position: relative;
-      padding: size(12);
+    svg {
+      @include wh100;
 
-      .userlist-link {
-        @include flex-center-vert;
-        gap: size(12);
-
-        .profile {
-          @include square(36);
-          @include circle;
-          @include flex-center;
-          overflow: hidden;
-
-          img {
-            @include wh100;
-            object-fit: cover;
-          }
-        }
-
-        .name-icon {
-          @include flex-center-vert;
-          gap: size(8);
-
-          .name {
-            color: $gray-500;
-            font-size: size(16);
-            font-weight: 500;
-            display: none;
-
-            @include breakpoint(tab992) {
-              display: block;
-            }
-
-            @include breakpoint(tab992) {
-              font-size: size(16);
-            }
-          }
-
-          .icon {
-            @include flex-center;
-            overflow: hidden;
-            @include transitiontransform;
-
-            svg {
-              @include wh100;
-            }
-          }
-        }
-      }
-
-      .dropdowncontent {
-        position: absolute;
-        top: 100%;
-        right: 0;
-        display: none;
-        @extend %animation;
-        @extend %slideUpIn;
-
-        .dropdownlist {
-          background: $white;
-          @include list-vertical;
-          width: size(160);
-          box-shadow: $dropdownshadow;
-
-          &-item {
-            @include hover {
-              .dropdownlist-link {
-                background: $primary-600;
-                border-color: $primary-600;
-                
-                .icon {    
-                  svg {    
-                    path {
-                      fill: $white;
-                    }
-                  }
-                }
-    
-                .text {
-                  color: $white;
-                }
-              }
-            }
-
-            &:last-child {
-              .dropdownlist-link {
-                border-bottom: 0;
-              }
-            }
-          }
-
-          &-link {
-            background: $white;
-            @include flex-center-vert;
-            gap: size(8);
-            padding: size(8) size(16);
-            @include border-single(bottom, solid, 1, $sideborder);
-            @include transitionsall;
-
-            .icon {
-              @include square(17);
-              @include flex-center;
-              overflow: hidden;
-
-              svg {
-                @include wh100;
-
-                path {
-                  fill: $textgray;
-                }
-              }
-            }
-
-            .text {
-              color: $gray-700;
-              font-size: size(14);
-            }
-          }
-        }
-      }
-
-      @include hover {
-        .userlist-link {  
-          .name-icon {  
-            .icon {
-              @include transform(rotate(180deg));
-  
-              svg {
-                @include wh100;
-              }
-            }
-          }
-        }
-
-        .dropdowncontent {
-          display: block;
-        }
-      }
-    }
-    
-    .notifiation-link {
-      background: $orange-50;
-      @include square(36);
-      @include circle;
-      @include flex-center;
-      overflow: hidden;
-      padding: size(8);
-
-      svg {
-        @include wh100;
+      path {
+        fill: $white;
       }
     }
   }

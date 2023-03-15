@@ -2,18 +2,3 @@
 @use "../../partials" as *;
 
 
-.mainsection {
-  margin-left: size(0);
-  @include flex-column;
-  gap: size(24);
-  @include w100;
-
-  @include breakpoint(tab992) {
-    width: calc(100% - size(260));
-    margin-left: auto;
-  }
-
-  &.active {
-    width: calc(100% - size(90));
-  }
-}

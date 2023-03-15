@@ -1,7 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700&display=swap');
 
-$primaryFont: "Outfit", sans-serif;
-$secondaryFont: "Lexend", sans-serif;
+$primaryFont: "Titillium Web", sans-serif;
 
 // FONT SIZE PIXEL TO REM
 @function calculateRem($size, $base: 16) {
@@ -32,7 +31,7 @@ $secondaryFont: "Lexend", sans-serif;
     normal: 400,
     medium: 500,
     semibold: 600,
-    bold: 700,
+    bold: 700
   );
 
   @if not map-has-key($conversion-map, $keyword) {

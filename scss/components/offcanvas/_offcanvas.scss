@@ -34,12 +34,8 @@
   &-header {
     // padding-bottom: 0;
 
-    .offcanvas-title {
-      @include font($primaryFont, 18, medium, normal, 26);
-    }
-
     .btn-close {
-      @include setBgColor($white, $redcolor);
+      @include setBgColor($white, $dangercolor);
       @include flex;
       gap: size(10);
       @include square(24);
@@ -58,7 +54,7 @@
 
         svg {
           path {
-            fill: $redcolor;
+            fill: $dangercolor;
           }
         }
       }
@@ -66,21 +62,6 @@
   }
 
   &-body {
-    @include flex-column;
-    gap: size(40);
-    padding-bottom: size(150);
-
-    .sidenav {
-      @include flex-column;
-      gap: size(32);
-
-      .divider {
-        @include w100;
-        height: size(1);
-        background: $gray-300;
-        margin: 0;
-      }
-    }
 
     &::-webkit-scrollbar {
       background: transparent;

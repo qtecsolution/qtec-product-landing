@@ -1,25 +1,2 @@
 @use "../global" as *;
 @use "../partials" as *;
-
-.allclasses,
-.coursesection,
-.complainsection,
-.certificatesection,
-.attendancesection,
-.assignmentsection,
-.assignmentdetails,
-.myprofile,
-.noticeboard,
-.leaderboard,
-.quizsection,
-.studentdash {
-  padding: size(0) size(16) size(24);
-
-  @include breakpoint(mobile768) {
-    padding: size(0) size(20) size(32);
-  }
-
-  @include breakpoint(tab992) {
-    padding: size(0) size(24) size(48);
-  }
-}

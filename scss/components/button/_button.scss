@@ -23,94 +23,19 @@ button,
   border: 0;
 }
 
-.btn-copy {
-  @include transparent-button;
-  @include square(18);
-  @include flex-center;
-  overflow: hidden;
-
-  svg {
-    @include wh100;
-
-    path {
-      @include transitionsall;
-    }
-  }
-
-  @include hover {
-    svg {
-      path {
-        fill: $primary-600;
-      }
-    }
-  }
-}
-
-.btn-hamburger {
-  @include transparent-button;
-  @include square(24);
-  @include flex-center;
-
-  svg {
-    path {
-      @include transitionsall;
-    }
-  }
-
-  @include hover {
-    svg {
-      path {
-        fill: $primary-600;
-      }
-    }
-  }
-}
-
-.btn-download {
-  border: 0;
-  box-shadow: $btnshadow;
-  padding: size(10) size(40);
+.btn-buy {
+  @include setBgColor($btnbg, $white);
+  background-size: 100% 100%;
   @include radius(8);
-  @include setBgColor($primary-600, $white);
-  font-size: size(15);
-  font-weight: 600;
+  display: inline-block;
+  font-size: size(14);
+  font-weight: 700;
+  height: size(44);
+  padding: size(12) size(28);
   text-align: center;
   @include transitionsall;
 
   @include hover {
-    @include setBgColor($primary-900, $white);
-  }
-}
-
-.btn-submit {
-  @include w100;
-  border: 0;
-  box-shadow: $btnshadow;
-  padding: size(10.75) size(40);
-  @include radius(8);
-  @include setBgColor($primary-600, $white);
-  font-size: size(15);
-  font-weight: 600;
-  text-align: center;
-  @include transitionsall;
-
-  @include hover {
-    @include setBgColor($primary-900, $white);
-  }
-}
-
-.btn-continue {
-  @include w100;
-  @include radius(8);
-  border: 0;
-  @include setBgColor($primary-600, $white);
-  box-shadow: $btnshadow;
-  font-weight: 600;
-  padding: size(12.21) size(10);
-  text-align: center;
-  @include transitionsall;
-
-  @include hover {
-    @include setBgColor($primary-900, $white);
+    background-size: 100% 50%;
   }
 }
