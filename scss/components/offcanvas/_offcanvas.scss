@@ -42,10 +42,10 @@
     }
 
     .btn-close {
-      @include setBgColor($white, $dangercolor);
+      @include setBgColor($white, $headingcolor);
       @include flex;
       gap: size(10);
-      @include square(24);
+      @include square(20);
       @include flex-center;
       overflow: hidden;
       @include radius(0);
@@ -69,6 +69,31 @@
   }
 
   &-body {
+    padding-top: 0;
+
+    .mobilelist {
+      @include list-vertical;
+
+      &-link {
+        color: $headingcolor;
+        font-size: size(14);
+        font-weight: 700;
+        padding: size(10);
+        letter-spacing: size(1.6);
+        @include flex-center;
+        @include w100;
+        text-transform: uppercase;
+        @include transitionscolor;
+
+        &:hover:not(.active) {
+          color: $buttonbg;
+        }
+
+        &.active {
+          color: $buttonbg;
+        }
+      }
+    }
 
     &::-webkit-scrollbar {
       background: transparent;

@@ -19,11 +19,15 @@
       @include circle;
       @include flex-center;
       overflow: hidden;
+      margin-left: size(16);
+
+      @include breakpoint(tab992) {
+        margin-left: size(0);
+      }
     }
 
     .desktoplist {
       @include list-horizontal;
-      gap: size(1);
 
       &-link {
         color: $headingcolor;
