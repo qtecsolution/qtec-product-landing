@@ -40,3 +40,20 @@ button,
     background-size: 100% 50%;
   }
 }
+
+.btn-subscribe {
+  @include setBgColor($buttonbg, $white);
+  border: 0;
+  @include radius(8);
+  @include flex-center;
+  font-size: size(12);
+  font-weight: 600;
+  width: size(91);
+  height: size(36);
+  padding: size(12) size(20);
+  @include transitionsbackground;
+
+  @include hover {
+    @include setBgColor($navyblue, $white);
+  }
+}
