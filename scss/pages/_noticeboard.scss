@@ -1,0 +1,85 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.noticeboard {
+  .noticeleft {
+    @include flex-column;
+    gap: size(14);
+    max-height: 75%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: size(16);
+
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: size(8);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $textmuted;
+      @include radius(8);
+    }
+  }
+
+  .noticeright {
+    .notice {
+      background: $white;
+      @include radius(8);
+      overflow: hidden;
+      @include flex-column;
+      gap: size(20);
+
+      &-header,
+      &-body {
+        padding: size(16);
+
+        @include breakpoint(mobile768) {
+          padding: size(20);
+        }
+
+        @include breakpoint(tab992) {
+          padding: size(24);
+        }
+      }
+
+      &-header {
+        padding-bottom: 0;
+        @include flex-column;
+        gap: size(8);
+
+        .noticedate {
+          color: $markText;
+          font-size: size(16);
+          font-weight: 500;
+        }
+
+        .noticetitle {
+          color: $gray-800;
+          font-size: size(20);
+          font-weight: 600;
+        }
+      }
+
+      &-body {
+        padding-top: 0;
+
+        p, span, div {
+          color: $gray-500;
+          font-size: size(14);
+          font-weight: 400;
+          text-align: justify;
+
+          @include breakpoint(tab992) {
+            font-size: size(16);
+          }
+        }
+      }
+
+      .divider {
+        @include w100;
+        height: size(1);
+        background: $gray-200;
+      }
+    }
+  }
+}

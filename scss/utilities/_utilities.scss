@@ -1,0 +1,7 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.text-mute {
+  color: $textmuted;
+  font: inherit;
+}

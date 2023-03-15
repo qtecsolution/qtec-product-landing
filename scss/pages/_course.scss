@@ -1,0 +1,191 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.coursesection {
+  .courseleft {
+    @include flex-column;
+    gap: size(14);
+    max-height: 75%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: size(16);
+
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: size(8);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $textmuted;
+      @include radius(8);
+    }
+  }
+
+  .courseright {
+    @include flex-column;
+    gap: size(24);
+
+    .videoplaybox {
+      position: relative;
+      @include w100;
+      height: size(180);
+      @include radius(8);
+      overflow: hidden;
+
+      @include breakpoint(mobile480) {
+        height: size(220);
+      }
+      
+      @include breakpoint(mobile576) {
+        height: size(280);
+      }
+
+      @include breakpoint(mobile768) {
+        height: size(400);
+      }
+      
+      img {
+        @include wh100;
+      }
+
+      .btn-playpause {
+        @include transparent-button;
+        @include square(48);
+        @include circle;
+        @include flex-center;
+        overflow: hidden;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include transform(translate(-50%, -50%));
+        z-index: 100;
+
+        @include breakpoint(mobile768) {
+          @include square(64);
+        }
+        
+        @include breakpoint(tab992) {
+          @include square(80);
+        }
+        
+        @include breakpoint(desktop1200) {
+          @include square(100);
+        }
+
+        svg {
+          @include wh100;
+        }
+      }
+    }
+
+    .classroomdetails {
+      @include flex-column;
+      gap: size(24);
+      background: $white;
+      @include radius(8);
+      padding: size(14);
+      
+      @include breakpoint(mobile576) {
+        padding: size(16);
+      }
+
+      @include breakpoint(mobile768) {
+        padding: size(20);
+      }
+
+      @include breakpoint(tab992) {
+        padding: size(24);
+      }
+
+      .nav-tabs {
+        border-color: $tableborder;
+        border-width: size(2);
+        gap: size(32);
+        @include radius(0);
+
+        .nav-link {
+          margin: 0;
+          color: $gray-600;
+          font-size: size(14);
+          font-weight: 500;
+          border: 0;
+          @include radius(0);
+          padding: size(8) 0;
+          @include border-single(bottom, solid, 2, transparent);
+          margin-top: size(2);
+
+          &:hover:not(.active) {
+            color: $primary-600;
+            border-color: $primary-600;
+          }
+
+          &.active {
+            color: $primary-600;
+            border-color: $primary-600;
+          }
+        }
+      }
+
+      .aboutdetail {
+        .textinfo {
+          color: $gray-600;
+          font-size: size(14);
+          font-weight: 300;
+          text-align: justify;
+
+          @include breakpoint(tab992) {
+            font-size: size(16);
+          }
+        }
+      }
+
+      .seatinfo {
+        @include flex-center-between;
+        gap: size(20);
+        flex-wrap: wrap;
+
+        .eventseat {
+          width: calc((100% / 4) - size(20));
+
+          @include breakpoint(mobile500) {
+            width: calc((100% / 5) - size(20));
+          }
+
+          @include breakpoint(mobile576) {
+            width: calc((100% / 6) - size(20));
+          }
+
+          @include breakpoint(mobile768) {
+            width: calc((100% / 8) - size(20));
+          }
+
+        }
+      }
+
+      .filelist {
+        @include list-horizontal;
+        gap: size(14);
+        flex-wrap: wrap;
+
+        &-item {
+          background: $filebg;
+          @include radius(4);
+          width: size(80);
+          height: size(94);
+          @include flex-center;
+          overflow: hidden;
+
+          .icon {
+            @include square(34);
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+              @include wh100;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,336 @@
+@use "../../global" as *;
+@use "../../partials" as *;
+
+.card-certificate {
+  @include w100;
+  @include flex-center-column;
+  gap: size(16);
+
+  &-header {
+    @include w100;
+    @include flex-center-column;
+    text-align: center;
+    gap: size(16);
+
+    .card-thumbnail {
+      @include flex-center;
+      @include w100;
+      height: size(200);
+      @include radius(25);
+      overflow: hidden;
+
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+    }
+
+    .title {
+      color: $darktext;
+      font-size: size(16);
+      font-weight: 500;
+    }
+  }
+
+  &-body {
+    @include flex-center;
+  }
+}
+
+.cardcourse {
+  background: $cardbg;
+  padding: size(16) size(24) size(24);
+  @include border(solid, 1, $sideborder);
+  @include radius(8);
+  @include flex-center-column;
+  gap: size(20);
+
+  &-thumbnail {
+    @include w100;
+    height: size(150);
+    @include flex-center;
+    @include radius(8);
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+      @include transitiontransform;
+
+      @include hover {
+        @include scale(1.1);
+      }
+    }
+  }
+
+  &-body {
+    @include w100;
+    @include flex-center-column;
+    gap: size(10);
+    text-align: center;
+    padding-left: size(10);
+    padding-right: size(10);
+
+    .titlebox {
+      @include w100;
+      margin-bottom: size(6);
+
+      .title {
+        color: $white;
+        font-size: size(14);
+        font-weight: 500;
+        @include text-overflow;
+      }
+    }
+
+    .courseprogress {
+      @include w100;
+      @include flex-center-vert;
+      gap: size(12);
+
+      .progress {
+        width: calc(100% - size(32));
+        height: size(8);
+        @include radius(4);
+        background: $white;
+        
+        &-bar {
+          background: $success-500;
+          @include radius(4);
+        }
+      }
+
+      .progresscount {
+        color: $white;
+        font-size: size(14);
+        font-weight: 500;
+        width: size(20);
+      }
+    }
+  }
+}
+
+.card-playlist {
+  background: $white;
+  cursor: pointer;
+  @include radius(8);
+  padding: size(24) size(12);
+  @include flex-center-between;
+  gap: size(20);
+  @include transitionsall;
+
+  .leftinfo {
+    @include flex-center-vert;
+    gap: size(12);
+
+    .icon {
+      background: $lightsuccess;
+      @include square(36);
+      @include flex-center;
+      @include circle;
+      overflow: hidden;
+      padding: size(8);
+
+      svg {
+        @include wh100;
+      }
+    }
+
+    .titlebox {
+      width: calc(100% - size(48));
+
+      .title {
+        color: $darktext;
+        font-size: size(14);
+        font-weight: 500;
+        @include line-clamp;
+      }
+    }
+  }
+
+  .rightinfo {
+    @include flex-center-vert;
+    gap: size(12);
+
+    .duration {
+      color: $gray-500;
+      font-size: size(10);
+    }
+
+    .completeicon,
+    .incompleteicon {
+      @include square(36);
+      @include circle;
+      @include flex-center;
+      overflow: hidden;
+
+      svg {
+        @include w100;
+      }
+    }
+
+    .doticon {
+      @include square(36);
+      @include flex-center;
+      overflow: hidden;
+
+      svg {
+        @include w100;
+      }
+    }
+  }
+
+  &:hover:not(.livecourse):not(.active) {
+    background: $gray-200;
+  }
+
+  &.active {
+    background: $primary-600;
+
+    .titlebox {
+      .title {
+        color: $white;
+      }
+    }
+
+    .rightinfo {
+      .duration {
+        color: $white;
+      }
+    }
+  }
+
+  &.livecourse {
+    background: $dangercolor;
+
+    .titlebox {
+      .title {
+        color: $white;
+      }
+    }
+
+    @include hover {
+      background: $redcolor;
+    }
+  }
+}
+
+.card-notice {
+  background: $white;
+  cursor: pointer;
+  @include radius(8);
+  padding: size(24) size(12);
+  @include flex;
+  gap: size(20);
+  @include transitionsall;
+
+  .icon {
+    background: $lightsuccess;
+    @include square(40);
+    @include circle;
+    @include flex-center;
+    overflow: hidden;
+    padding: size(8);
+
+    svg {
+      @include wh100;
+    }
+  }
+
+  .details {
+    width: calc(100% - size(60));
+    @include flex-column;
+    gap: size(8);
+
+    &-header {
+      @include flex-column;
+      gap: size(4);
+
+      .title {
+        color: $gray-900;
+        font-size: size(16);
+        font-weight: 500;
+      }
+
+      .noticedate {
+        color: $gray-600;
+        font-size: size(12);
+        font-weight: 500;
+      }
+    }
+
+    &-body {
+      .info {
+        color: $gray-800;
+        font-size: size(14);
+        font-weight: 500;
+      }
+    }
+  }
+
+  &:hover:not(.active) {
+    background: $gray-200;
+  }
+
+  &.active {
+    background: $primary-600;
+
+    .details {
+      &-header {
+        .title,
+        .noticedate {
+          color: $white;
+        }
+      }
+
+      &-body {
+        .info {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.eventseat {
+  @include flex-center-column;
+
+  .user-thumb {
+    @include square(32);
+    @include flex-center;
+    @include circle;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+
+  .seat {
+    @include square(55);
+    @include flex-center;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+
+  &.emptyseat {
+    opacity: .6;
+    
+    .user-thumb {
+      background: $gray-400;
+      
+      img {
+        display: none;
+      }
+    }
+
+    .seat {
+      opacity: .7;
+    }
+  }
+}

@@ -1,0 +1,27 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.quizsection {
+  .quizleft {
+    @include flex-column;
+    gap: size(14);
+    max-height: 75%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding-right: size(16);
+
+    &::-webkit-scrollbar {
+      background: transparent;
+      width: size(8);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: $textmuted;
+      @include radius(8);
+    }
+  }
+
+  .quizright {
+
+  }
+}
