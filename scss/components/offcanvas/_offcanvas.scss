@@ -34,6 +34,13 @@
   &-header {
     // padding-bottom: 0;
 
+    .logo {
+      @include square(60);
+      @include circle;
+      @include flex-center;
+      overflow: hidden;
+    }
+
     .btn-close {
       @include setBgColor($white, $dangercolor);
       @include flex;

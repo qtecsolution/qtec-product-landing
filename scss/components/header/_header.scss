@@ -4,11 +4,22 @@
 .header {
   background: $white;
   box-shadow: $headershadow;
-  height: size(100);
+  height: size(80);
   @include flex-center-vert;
+
+  @include breakpoint(tab992) {
+    height: size(100);
+  }
 
   &-nav {
     @include flex-center-between;
+
+    .logo {
+      @include square(60);
+      @include circle;
+      @include flex-center;
+      overflow: hidden;
+    }
 
     .desktoplist {
       @include list-horizontal;
