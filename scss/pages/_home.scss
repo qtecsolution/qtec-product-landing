@@ -1,6 +1,22 @@
 @use "../global" as *;
 @use "../partials" as *;
 
+.featured {
+  background: linear-gradient(135deg, #0A387A 0%, #6541C0 100%);
+  padding: size(60) size(0);
+  padding-bottom: size(70);
+
+  &-content {
+
+  }
+  &-title {
+      color: $white;
+      font-weight: 600;
+      text-align: center;
+      margin-bottom: size(60)
+  }
+}
+
 .integration {
   @include flex-center-column;
   gap: size(24);

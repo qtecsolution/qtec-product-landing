@@ -9,7 +9,6 @@ button,
   opacity: 1;
   margin: 0;
   padding: 0;
-  @include wh100;
 
   &:focus {
     box-shadow: none;
@@ -55,5 +54,32 @@ button,
 
   @include hover {
     @include setBgColor($navyblue, $white);
+  }
+}
+
+.btn-live {
+  padding: size(14) size(26);
+  @include border(solid,1,$gray-700);
+  @include radius(8);
+  color: $gray-700;
+  @include transitionsall;
+  @include font($primaryFont,14,semibold,normal,14);
+  @include hover {
+    background: darken($white,10%);
+  }
+
+}
+
+.btn-learnmore {
+  background-size: 100% 100%;
+  padding: size(14) size(26);
+  display: inline-block;
+  @include setBgColor($btnbg, $white);
+  @include radius(8);
+  @include border(solid,1,$white);
+  @include font($primaryFont,14,semibold,normal,14);
+  @include transitionsall;
+  @include hover {
+    background-size: 100% 50%;
   }
 }

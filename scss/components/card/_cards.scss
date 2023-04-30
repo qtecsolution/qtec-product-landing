@@ -95,3 +95,80 @@
     }
   }
 }
+.featured-card {
+position: relative;
+overflow: hidden;
+@include radius(16);
+height: size(326);
+
+  .featured-thumb {
+    @include wh100;
+    overflow: hidden;
+    @include radius(10);
+    @include transitionsall;
+    img {
+      @include wh100;
+      object-fit: cover;
+
+    }
+  }
+  .featured-content {
+    background: $white;
+    position: absolute;
+    bottom: size(-56);
+    @include transitionsall;
+    height: size(154);
+    @include w100; 
+   @include flex-column;
+   gap: size(10);
+
+    padding: size(16);
+    align-items: flex-start;
+    .content-left {
+      @include flex-column;
+      gap: size(4);
+    }
+
+    .top-content {
+     @include flex-between;
+     align-items: flex-start;
+     gap: size(50);
+
+    }
+
+    &-title {
+      @include font($primaryFont,20,semibold,normal,30);
+      color: $gray-700;
+    }
+    &-text {
+      color: $gray-700;
+      @include line-clamp;
+
+    }
+    &-price {
+      color: $gray-700;
+      @include font($primaryFont,30,semibold,normal,46);
+    }
+
+    .featured-buttons {
+      @include flex;
+      justify-content: flex-end;
+      @include w100;
+      gap: size(8);
+
+    }
+
+
+
+  }
+
+  @include hover {
+    .featured-content {
+      bottom: 0;
+    }
+    .featured-thumb {
+      transform: scale(1.03);
+    }
+  }
+}
+
