@@ -2,7 +2,74 @@
 @use "../partials" as *;
 
 
+// hero 
+.hero {
+  padding: size(70) size(0);
+  padding-bottom: size(100);
+  @include breakpoint(tab992) {
+    padding-bottom: size(130);
+  }
+  &-content {
+    @include flex-column;
+    gap: size(60);
+    @include breakpoint(tab992) {
+      gap: size(130);
+    }
+  }
+  .left-content {
+    @include flex-column;
+    gap: size(24);
+    justify-content: flex-end;
+    height: 100%;
+    text-align: center;
+    @include breakpoint(tab992) {
+      text-align: left;
+    }
+  }
+    &-title {
+    color: $headingcolor;
+    @include font($primaryFont,30,bold,normal,46);
+    
+    @include breakpoint(mobile768) {
+    @include font($primaryFont,36,bold,normal,50);
 
+    }
+    @include breakpoint(desk1200) {
+    @include font($primaryFont,40,bold,normal,60);
+    }
+
+  }
+  &-text {
+
+  }
+  .hero-image {
+    max-height: size(360);
+    overflow: hidden;
+    transform: translatey(0px);
+    animation: float 8s ease-in-out infinite;
+    img {
+      @include wh100;
+      object-fit: cover; 
+    }
+  }
+
+  .subcribe-box {
+    @include flex;
+    gap: size(10);
+    input {
+      background: $white;
+      @include border(solid,1,$inputborder);
+      padding: size(12) size(24);
+      @include transitionsall;
+      flex: 1;
+      @include radius(8);
+      &:focus {
+        border-color: #02D7F8;
+      }
+    } 
+  
+  }
+}
 // monthly featured 
 .featured {
   background: linear-gradient(135deg, #0A387A 0%, #6541C0 100%);
@@ -186,7 +253,7 @@
   }
 }
 
-
+// hover animation for image 
 @-webkit-keyframes shine {
 	100% {
 		left: 125%;
@@ -196,4 +263,21 @@
 	100% {
 		left: 125%;
 	}
+} 
+//float animation for image 
+
+@keyframes float {
+	0% {
+		
+		transform: translatey(0px);
+	}
+	50% {
+		
+		transform: translatey(-20px);
+	}
+	100% {
+
+		transform: translatey(0px);
+	}
 }
+

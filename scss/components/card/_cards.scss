@@ -1,6 +1,69 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
+.heroCard {
+  @include flex-column;
+  gap: size(12);
+  align-items: center;
+  text-align: center; 
+  padding: size(10);
+  @include transitionsall;
+  .icon-wrapper {
+    @include square(76);
+    @include radius(30);
+    @include flex-center;
+    background: $iconbg-2;
+    @include transitionsall;
+    @include hover {
+      background: darken($iconbg-2,10%);
+
+    }
+
+  }
+  &-title {
+    @include font($primaryFont,16,semibold,normal,24);
+    color: $headingcolor;
+  }
+  @include hover {
+    transform: translateY(size(-8))
+  }
+
+  &.second {
+    .icon-wrapper {
+    
+      background: $iconbg-3;
+      @include hover {
+        background: darken($iconbg-3,10%);
+  
+      }
+  
+    }
+  }
+  &.third {
+    .icon-wrapper {
+    
+      background: $iconbg-4;
+      @include hover {
+        background: darken($iconbg-4,10%);
+  
+      }
+  
+    }
+  }
+  &.fourth {
+    .icon-wrapper {
+    
+      background: $iconbg-5;
+      @include hover {
+        background: darken($iconbg-5,10%);
+  
+      }
+  
+    }
+  }
+
+
+}
 .analytics {
   @include flex-column;
   gap: size(24);
