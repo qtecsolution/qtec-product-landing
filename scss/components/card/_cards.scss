@@ -1,6 +1,195 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
+.analytics {
+  @include flex-column;
+  gap: size(24);
+
+  &-top {
+    @include flex-column;
+    align-items: center;
+    text-align: center;
+    @include breakpoint(tab992) {
+      text-align: left;
+      align-items: flex-start
+    }
+  }
+  &-bottom {
+    @include border-single(top,solid,1,$sectionborder);
+    @include flex-between;
+    padding-top: size(30);
+
+  }
+
+  
+  &-pill  {
+    @include setBgColor($successbg,$successcolor);
+    @include radius(50);
+    text-transform: lowercase;
+    @include font($primaryFont,12,semibold,normal,16);
+    padding: size(2) size(10);
+    font-weight: 600;
+    @include  flex-center;
+  }
+  &-title {
+    padding-top: size(20);
+    @include font($primaryFont,30,semibold,normal,40);
+    @include breakpoint(tab992) {
+      padding-top: size(30);
+      @include font($primaryFont,40,semibold,normal,60);
+    }
+  }
+  &-text {
+    color: $headingcolor;
+    padding-top: size(10);
+  }
+
+  .pDashboard , .inSync  {
+    @include flex-column;
+    gap: size(12);
+
+    .icon-wrapper {
+      @include square(60);
+      background: $iconbg-1;
+      @include flex-center;
+      @include radius(20);
+
+
+    }
+    &-title {
+      color: $headingcolor;
+      @include font($primaryFont,16,semibold,normal,24);
+    }
+    &-text {
+      color: $headingcolor;
+    }
+  }
+  .inSync {
+    .icon-wrapper {
+      background: $iconbg-2;
+    }
+  }
+
+
+}
+.collaborate {
+  @include flex-column;
+  gap: size(24);
+
+  &-top {
+    @include flex-column;
+    align-items: center;
+    text-align: center;
+    @include breakpoint(tab992) {
+      text-align: left;
+      align-items: flex-start
+    }
+  }
+  &-bottom {
+    @include border-single(top,solid,1,$sectionborder);
+    padding-top: size(30);
+    @include flex;
+    gap: size(30);
+    flex-wrap: wrap;
+    .collaborate-features {
+      @include list-vertical;
+      gap: size(14);
+      li {
+        @include flex;
+        align-items: center;
+        gap: size(10)
+      }
+    }
+
+
+  }
+
+  
+  &-pill  {
+    @include setBgColor($badgebg,$badgetext);
+    @include radius(50);
+    text-transform: lowercase;
+    @include font($primaryFont,12,semibold,normal,16);
+     padding: size(2) size(10);
+    font-weight: 600;
+    @include  flex-center;
+  }
+  &-title {
+    padding-top: size(20);
+    @include font($primaryFont,30,semibold,normal,40);
+    @include breakpoint(tab992) {
+      padding-top: size(30);
+      @include font($primaryFont,40,semibold,normal,60);
+    }
+  }
+  &-text {
+    color: $headingcolor;
+    padding-top: size(10);
+  }
+}
+.report {
+  @include flex-column;
+  gap: size(24);
+
+  &-top {
+    @include flex-column;
+    align-items: center;
+    text-align: center;
+    @include breakpoint(tab992) {
+      text-align: left;
+      align-items: flex-start
+    }
+  }
+  &-bottom {
+    @include border-single(top,solid,1,$sectionborder);
+    padding-top: size(30);
+    @include flex;
+    gap: size(30);
+    flex-wrap: wrap;
+    .report-features {
+      @include list-vertical;
+      gap: size(14);
+      li {
+        @include flex;
+        align-items: center;
+        gap: size(10);
+        .number {
+          color: $headingcolor;
+          @include font($primaryFont,16,semibold,normal,24);
+        }
+        .text {
+
+        }
+      }
+    }
+
+
+  }
+
+  
+  &-pill  {
+    @include setBgColor($badgebg,$badgetext);
+    @include radius(50);
+    text-transform: lowercase;
+    @include font($primaryFont,12,semibold,normal,16);
+     padding: size(2) size(10);
+    font-weight: 600;
+    @include  flex-center;
+  }
+  &-title {
+    padding-top: size(20);
+    @include font($primaryFont,30,semibold,normal,40);
+    @include breakpoint(tab992) {
+      padding-top: size(30);
+      @include font($primaryFont,40,semibold,normal,60);
+    }
+  }
+  &-text {
+    color: $headingcolor;
+    padding-top: size(10);
+  }
+}
+
 .cardblog {
   background: $white;
   box-shadow: $blogshadow;
@@ -98,32 +287,39 @@
 .featured-card {
 position: relative;
 overflow: hidden;
-@include radius(16);
+@include radius(14);
 height: size(326);
 
   .featured-thumb {
     @include wh100;
     overflow: hidden;
-    @include radius(10);
+    @include radius(16);
     @include transitionsall;
+    overflow: hidden;
+    
     img {
       @include wh100;
       object-fit: cover;
+      @include radius(16);
+      display: block;
 
     }
   }
   .featured-content {
     background: $white;
     position: absolute;
-    bottom: size(-56);
+    bottom: size(-56); 
     @include transitionsall;
     height: size(154);
     @include w100; 
-   @include flex-column;
-   gap: size(10);
+    @include flex-column;
+    gap: size(10);
+    z-index: 10;
 
     padding: size(16);
-    align-items: flex-start;
+    align-items: flex-start; 
+    border-bottom-left-radius: size(14);
+    border-bottom-right-radius: size(14);
     .content-left {
       @include flex-column;
       gap: size(4);
@@ -167,7 +363,7 @@ height: size(326);
       bottom: 0;
     }
     .featured-thumb {
-      transform: scale(1.03);
+      transform: scale(.98);
     }
   }
 }

@@ -58,7 +58,7 @@ button,
 }
 
 .btn-live {
-  padding: size(14) size(26);
+  padding: size(14) size(16);
   @include border(solid,1,$gray-700);
   @include radius(8);
   color: $gray-700;
