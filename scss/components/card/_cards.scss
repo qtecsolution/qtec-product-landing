@@ -431,3 +431,60 @@ height: size(326);
   }
 }
 
+.cardPayment {
+  @include border(solid,1,$cardBorder);
+  @include radius(8);
+  background: $white;
+ 
+  @include breakpoint(tab992) {
+   
+  }
+
+  &-header {
+    @include border-single(bottom,solid,1,$cardBorder);
+    padding: size(20) size(30);
+    @include flex-between;
+
+
+    @include breakpoint(tab992) {
+      padding: size(24) size(34);
+    }
+    .payment-type {
+      color: hsl(218, 15%, 58%); //8490A5
+      @include font($primaryFont, 18, normal, normal, 27);
+    }
+    .price {
+      color: $gray-700; //8490A5
+      @include font($primaryFont, 30, semibold, normal, 46);
+    }
+
+    
+  }
+  &-body {
+    padding: size(20) size(30);
+    padding-right: 0;
+    @include flex-start;
+    gap:size(10);
+    @include breakpoint(tab992) {
+      padding: size(24) size(34);
+      padding-right: 0;
+    }
+    .payment-features {
+      @include list-vertical;
+      gap: size(14);
+      li {
+        @include flex;
+        align-items: center;
+        gap: size(10)
+      }
+    }
+  }
+  &-footer {
+    @include border-single(top, solid, 1, $cardBorder);
+    padding: size(20) size(30);
+    @include breakpoint(tab992) {
+      padding: size(24) size(34);
+    }
+  }
+
+}

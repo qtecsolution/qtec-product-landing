@@ -1,0 +1,64 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.productDetail {
+    padding: size(50) size(0);
+    @include breakpoint(tab992) {
+        padding: size(60) siz(0);
+        padding-bottom: size(110);
+    }
+
+    .product-title {
+        @include font($primaryFont, 24, bold, normal, 38);
+        color: $headingcolor;
+        padding-bottom: size(60);
+        @include breakpoint(mobile576) {
+            @include font($primaryFont, 30, bold, normal, 46);
+        }
+        
+        
+    }
+
+    &-info {
+        @include flex-column;
+        gap: size(50);
+
+    }
+    .productDetail-content {
+        background: $white;
+        @include radius(14);
+        @include border(solid, 1, #EDEFF2);
+        padding: size(20) size(20);
+        @include breakpoint(mobile576) {
+            padding: size(42) size(32);
+        }
+         h4 {
+            color:  hsl(214, 33%, 17%);
+            padding: size(14) size(0);
+            @include breakpoint(mobile576) {
+                padding: size(30) size(0);
+            }
+         }
+         p {
+            color:  hsl(214, 33%, 17%);
+           line-height: size(30);
+         }
+         ul {
+            li {
+                line-height: size(30);
+            }
+         }
+         
+
+
+    }
+    .productDetail-image  {
+      @include w100;
+      height: auto;
+      @include radius(20);
+      img {
+        @include wh100;
+        object-fit: cover;
+      }
+    }
+}
