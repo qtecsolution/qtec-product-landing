@@ -22,14 +22,23 @@
     @include radius(6);
     @include transitionsall;
     padding: size(9) size(10);
-   &:focus {
+    &:focus {
 
-    }
+      }
     &::placeholder {
       color: $textplaceholder-2;
      @include font($primaryFont,14,normal,normal,20);
     }
 
+  }
+  select {
+    @include border(solid,1,$inputborder);
+    @include radius(8);
+    padding: size(8) size(8);
+    @include transitionsall;
+    &:focus {
+      border-color: #0876FC;
+    }
   }
   .show-hide {
     position: absolute;
