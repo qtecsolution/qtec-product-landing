@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal </title>
+      <!-- FAVICON ICON -->
+    <link rel="shortcut icon" href="../assets/images/logo/logo.svg" type="image/svg+xml">
+    <!-- BACK-TOP CSS -->
+    <link rel="stylesheet" href="../assets/css/back-top/backToTop.css">
+    <!-- BOOTSTRAP CSS (5.3) -->
+    <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
+    <!-- APP-CSS -->
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+</head>
+<body>
+<div class="container py-5">
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+
+      <div class="modal-content ">
+        <form class="supportform">
+            <div class="supportform-header">
+                <h3 class="title">Support Ticket</h3>
+            </div>
+            <div class="supportform-body">
+                <div class="form-group">
+                    <label for="productName" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="productName" placeholder="Cybershield">
+                 </div>
+                <div class="form-group">
+                    <label for="productType" class="form-label">Product type</label>
+                    <input type="text" class="form-control" id="productType" placeholder="Product type ">
+                 </div>
+                <div class="form-group">
+                    <label for="message" class="form-label" >Message</label>
+                    <textarea name="" rows="8" id="message" placeholder="write message here" class="form-control"></textarea>
+                 </div>
+                 <button class="update-btn w-100">Send</button>
+            </div>
+        </form>
+
+      </div>
+
+      
+    </div>
+  </div>
+
+</div>
+  <!-- BOOTSTRAP JS (5.3) -->
+  <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- BOOTSTRAP-TOOLTIP -->
+  <script src="assets/js/tooltip/tooltip.js"></script>
+  <!-- BACK-TOP JS -->
+  <script src="assets/js/back-top/backToTop.js"></script>
+  <script src="assets/js/back-top/backtop.js"></script>
+  <!-- COPYRIGHT JS -->
+  <script src=".assets/js/copyright/copyright.js"></script>
+</body>
+</html>

@@ -66,4 +66,26 @@
       }
     }
   }
+  .right-menu {
+    @include flex;
+    .header-user {
+      @include flex;
+      align-items: center;
+      gap: size(20)
+
+    }
+    .username {
+      color: $headingcolor;
+      @include font($primaryFont,14,bold,normal,20);
+      
+    }
+    .user-image {
+      @include square(40);
+      @include circle;
+      overflow: hidden;
+      img {
+        @include wh100;
+      }
+    }
+  }
 }

@@ -1,3 +1,115 @@
 @use "../../global"as *;
 @use "../../partials"as *;
+$font-family_1: Arial, sans-serif;
+$background-color_1: #f2f2f2;
+$background-color_2: #F0F2F7;
 
+table {
+	font-family: $font-family_1;
+	border-collapse: collapse;
+	width: 100%;
+	margin-top: 20px;
+	th, td {
+	padding: size(10) size(8);
+    
+	text-align: left;
+}
+td{
+    border-bottom: 1px solid  #DDE4E9;
+    color: $labeltext;
+    @include font($primaryFont,14,normal,normal,21);
+    max-width: size(216);
+    white-space: nowrap; /* prevent wrapping */
+        overflow: hidden; /* hide overflowing content */
+        text-overflow: ellipsis; /* show ellipsis for overflow */
+    span {
+        
+    }
+}
+th {
+	background: $white;
+    color: $labeltext;
+    @include font($primaryFont,16,semibold,normal,24);
+    border-bottom: 1px solid  #DDE4E9;
+    
+}
+tr {
+	&:hover {
+		background-color: $background-color_2;
+        .buttons-wrapper {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+	}
+}
+.buttons-wrapper {
+    @include flex;
+    gap: size(20);
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    @include transitionsall;
+    transform: translateX(100px);
+    button {
+        border: none;
+        background: transparent;
+    }
+}
+}
+
+$pagination-color: #333;
+$pagination-bg-color: #F0F2F7;
+$pagination-active-bg-color: #333;
+$pagination-active-color: #fff;
+$pagination-border-radius: 5px;
+$pagination-arrow-size: 20px;
+$pagination-arrow-weight: bold;
+$pagination-arrow-padding: 5px;
+$pagination-padding: 10px;
+$pagination-margin: 10px;
+$pagination-border: 1px solid #ccc;
+$pagination-disabled-opacity: 0.5;
+$pagination-disabled-cursor: not-allowed;
+
+.table-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  
+  a {
+    display: inline-block;
+    @include square(30);
+    @include flex-center;
+    margin-right: $pagination-margin;
+    text-decoration: none;
+    color: $gray-600;
+    @include font($primaryFont,14,normal,normal,20);
+    
+    border-radius: $pagination-border-radius;
+    background: $pagination-bg-color;
+    @include transitionsall;
+    &:hover:not(.active) {
+      background-color: darken($pagination-bg-color,10%);
+    }
+  }
+  
+  .active {
+    background-color: $pagination-active-bg-color;
+    color: $pagination-active-color;
+  }
+  
+  .prev,
+  .next {
+    font-size: $pagination-arrow-size;
+    font-weight: $pagination-arrow-weight;
+    padding: $pagination-arrow-padding;
+    margin-right: $pagination-margin;
+  }
+  
+  .disabled {
+    opacity: $pagination-disabled-opacity;
+    cursor: $pagination-disabled-cursor;
+  }
+}

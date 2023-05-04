@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Langing Page | Support</title>
+  <!-- FAVICON ICON -->
+  <link rel="shortcut icon" href="../assets/images/logo/logo.svg" type="image/svg+xml">
+  <!-- BACK-TOP CSS -->
+  <link rel="stylesheet" href="../assets/css/back-top/backToTop.css">
+  <!-- BOOTSTRAP CSS (5.3) -->
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
+  <!-- APP-CSS -->
+  <link rel="stylesheet" href="../assets/css/style.min.css">
+</head>
+<body>
+  <!-- HEADER-SECTION START -->
+  <header class="header sticky-top">
+    <div class="container">
+      <nav class="header-nav">
+        <!-- HAMBURGER BUTTON -->
+        <div class="d-lg-none d-block">
+          <button type="button" class="btn-hamburger" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu" aria-controls="mobileMenu">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#hamburger-icon)">
+                <path d="M3 4H21V6H3V4ZM3 11H15V13H3V11ZM3 18H21V20H3V18Z" fill="#09121F"></path>
+              </g>
+              <defs>
+                <clipPath id="hamburger-icon">
+                  <rect width="24" height="24" fill="white"></rect>
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+
+          <!-- MOBLE-MENU START -->
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenu">
+            <div class="offcanvas-header">
+              <a href="../index.html" class="logo">
+                <img src="../assets/images/logo/logo.svg" alt="brand-logo">
+              </a>
+
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+                <img src="../assets/cursor/chevron-up-solid.svg" alt="bottom to top">
+              </button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="mobilelist">
+                <li class="mobilelist-item">
+                  <a href="../index.html" class="mobilelist-link">Products</a>
+                </li>
+                <li class="mobilelist-item">
+                  <a href="../services.html" class="mobilelist-link">Our Services</a>
+                </li>
+                <li class="mobilelist-item">
+                  <a href="../blog.html" class="mobilelist-link">Blog</a>
+                </li>
+                <li class="mobilelist-item">
+                  <a href="../support.html" class="mobilelist-link active">Support</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- MOBLE-MENU END -->
+        </div>
+
+        <!-- BRAND-LOGO -->
+        <div class="d-none d-lg-block">
+          <a href="../index.html" class="logo">
+            <img src="../assets/images/logo/logo.svg" alt="brand-logo">
+          </a>
+        </div>
+
+        <!-- DESKTOP-MENU -->
+        <div class="d-none d-lg-block">
+          <ul class="desktoplist">
+            <li class="desktoplist-item">
+              <a href="../index.html" class="desktoplist-link">Products</a>
+            </li>
+            <li class="desktoplist-item">
+              <a href="../services.html" class="desktoplist-link">Our Services</a>
+            </li>
+            <li class="desktoplist-item">
+              <a href="../blog.html" class="desktoplist-link">Blog</a>
+            </li>
+            <li class="desktoplist-item">
+              <a href="../support.html" class="desktoplist-link active">Support</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="right-menu">
+          <div class="header-user">
+            <h3 class="username d-none d-lg-block">Kais Rayhan</h3>
+            <figure class="user-image">
+              <img src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dXNlcnxlbnwwfHwwfHw%3D&w=1000&q=80" alt="">
+            </figure>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- HEADER-SECTION END -->
+  
+  <section class="myAccount">
+    <div class="container">
+        <div class="userInfo">
+            <h2 class="user-name">Kayes Rayhan </h2>
+            <div class="breadcumb">
+                <span>> Support Tickets</span>
+            </div>
+        </div>
+        <div class="myAccount-content">
+        
+            <div class="myAccount-sidebar">
+                <ul class="sidebarMenu ">
+                    <li class="sidebarMenu-item"><a href="myaccount.html" class="sidebarMenu-link ">Account Details</a></li>
+                    <li class="sidebarMenu-item"><a href="orders.html" class="sidebarMenu-link active">Orders</a></li>
+                    <li class="sidebarMenu-item"><a href="support-ticket.html" class="sidebarMenu-link ">Support Tickets</a>
+                    </li>
+                    <li class="sidebarMenu-item"><a href="#" class="sidebarMenu-link">Logout</a></li>
+                </ul>
+            </div>
+        
+            <div class="myAccount-details">
+                <!-- table  -->
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product Name</th>
+                                <th>Product Type</th>
+                                <th>Purchase Date</th>
+                                <th>Price</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>NovaFlow - a project management ...</td>
+                                <td>SAAS</td>
+                                <td>18-03-2022</td>
+                                <td>45 $</td>
+                                <td>
+                                    <div class="buttons-wrapper">
+                                        <button>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 6.66699L7.9974 10.0003L11.3307 6.66699" stroke="#425466"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="tag" data-bs-toggle="modal" data-bs-target="#openingTicket">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.7293 8.93968L8.94927 13.7197C8.82544 13.8436 8.67839 13.942 8.51652 14.0091C8.35466 14.0762 8.18116 14.1107 8.00594 14.1107C7.83072 14.1107 7.65721 14.0762 7.49535 14.0091C7.33349 13.942 7.18643 13.8436 7.0626 13.7197L1.33594 7.99968V1.33301H8.0026L13.7293 7.05968C13.9776 7.30949 14.117 7.64743 14.117 7.99968C14.117 8.35192 13.9776 8.68986 13.7293 8.93968Z"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 4.66699H4.67295" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+        
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NovaFlow - a project management ...</td>
+                                <td>SAAS</td>
+                                <td>18-03-2022</td>
+                                <td>45 $</td>
+                                <td>
+                                    <div class="buttons-wrapper">
+                                        <button>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 6.66699L7.9974 10.0003L11.3307 6.66699" stroke="#425466"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="tag">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.7293 8.93968L8.94927 13.7197C8.82544 13.8436 8.67839 13.942 8.51652 14.0091C8.35466 14.0762 8.18116 14.1107 8.00594 14.1107C7.83072 14.1107 7.65721 14.0762 7.49535 14.0091C7.33349 13.942 7.18643 13.8436 7.0626 13.7197L1.33594 7.99968V1.33301H8.0026L13.7293 7.05968C13.9776 7.30949 14.117 7.64743 14.117 7.99968C14.117 8.35192 13.9776 8.68986 13.7293 8.93968Z"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 4.66699H4.67295" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+        
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NovaFlow - a project management ...</td>
+                                <td>SAAS</td>
+                                <td>18-03-2022</td>
+                                <td>45 $</td>
+                                <td>
+                                    <div class="buttons-wrapper">
+                                        <button>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 6.66699L7.9974 10.0003L11.3307 6.66699" stroke="#425466"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="tag">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.7293 8.93968L8.94927 13.7197C8.82544 13.8436 8.67839 13.942 8.51652 14.0091C8.35466 14.0762 8.18116 14.1107 8.00594 14.1107C7.83072 14.1107 7.65721 14.0762 7.49535 14.0091C7.33349 13.942 7.18643 13.8436 7.0626 13.7197L1.33594 7.99968V1.33301H8.0026L13.7293 7.05968C13.9776 7.30949 14.117 7.64743 14.117 7.99968C14.117 8.35192 13.9776 8.68986 13.7293 8.93968Z"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 4.66699H4.67295" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+        
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NovaFlow - a project management ...</td>
+                                <td>SAAS</td>
+                                <td>18-03-2022</td>
+                                <td>45 $</td>
+                                <td>
+                                    <div class="buttons-wrapper">
+                                        <button>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 6.66699L7.9974 10.0003L11.3307 6.66699" stroke="#425466"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="tag">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.7293 8.93968L8.94927 13.7197C8.82544 13.8436 8.67839 13.942 8.51652 14.0091C8.35466 14.0762 8.18116 14.1107 8.00594 14.1107C7.83072 14.1107 7.65721 14.0762 7.49535 14.0091C7.33349 13.942 7.18643 13.8436 7.0626 13.7197L1.33594 7.99968V1.33301H8.0026L13.7293 7.05968C13.9776 7.30949 14.117 7.64743 14.117 7.99968C14.117 8.35192 13.9776 8.68986 13.7293 8.93968Z"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 4.66699H4.67295" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+        
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NovaFlow - a project management ...</td>
+                                <td>SAAS</td>
+                                <td>18-03-2022</td>
+                                <td>45 $</td>
+                                <td>
+                                    <div class="buttons-wrapper">
+                                        <button>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 6.66699L7.9974 10.0003L11.3307 6.66699" stroke="#425466"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="tag">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.7293 8.93968L8.94927 13.7197C8.82544 13.8436 8.67839 13.942 8.51652 14.0091C8.35466 14.0762 8.18116 14.1107 8.00594 14.1107C7.83072 14.1107 7.65721 14.0762 7.49535 14.0091C7.33349 13.942 7.18643 13.8436 7.0626 13.7197L1.33594 7.99968V1.33301H8.0026L13.7293 7.05968C13.9776 7.30949 14.117 7.64743 14.117 7.99968C14.117 8.35192 13.9776 8.68986 13.7293 8.93968Z"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 4.66699H4.67295" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+        
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NovaFlow - a project management ...</td>
+                                <td>SAAS</td>
+                                <td>18-03-2022</td>
+                                <td>45 $</td>
+                                <td>
+                                    <div class="buttons-wrapper">
+                                        <button>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 6.66699L7.9974 10.0003L11.3307 6.66699" stroke="#425466"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="tag">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.7293 8.93968L8.94927 13.7197C8.82544 13.8436 8.67839 13.942 8.51652 14.0091C8.35466 14.0762 8.18116 14.1107 8.00594 14.1107C7.83072 14.1107 7.65721 14.0762 7.49535 14.0091C7.33349 13.942 7.18643 13.8436 7.0626 13.7197L1.33594 7.99968V1.33301H8.0026L13.7293 7.05968C13.9776 7.30949 14.117 7.64743 14.117 7.99968C14.117 8.35192 13.9776 8.68986 13.7293 8.93968Z"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 4.66699H4.67295" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+        
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NovaFlow - a project management ...</td>
+                                <td>SAAS</td>
+                                <td>18-03-2022</td>
+                                <td>45 $</td>
+                                <td>
+                                    <div class="buttons-wrapper">
+                                        <button>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 6.66699L7.9974 10.0003L11.3307 6.66699" stroke="#425466"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="tag">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.7293 8.93968L8.94927 13.7197C8.82544 13.8436 8.67839 13.942 8.51652 14.0091C8.35466 14.0762 8.18116 14.1107 8.00594 14.1107C7.83072 14.1107 7.65721 14.0762 7.49535 14.0091C7.33349 13.942 7.18643 13.8436 7.0626 13.7197L1.33594 7.99968V1.33301H8.0026L13.7293 7.05968C13.9776 7.30949 14.117 7.64743 14.117 7.99968C14.117 8.35192 13.9776 8.68986 13.7293 8.93968Z"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 4.66699H4.67295" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+        
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NovaFlow - a project management ...</td>
+                                <td>SAAS</td>
+                                <td>18-03-2022</td>
+                                <td>45 $</td>
+                                <td>
+                                    <div class="buttons-wrapper">
+                                        <button>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 6.66699L7.9974 10.0003L11.3307 6.66699" stroke="#425466"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="tag">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.7293 8.93968L8.94927 13.7197C8.82544 13.8436 8.67839 13.942 8.51652 14.0091C8.35466 14.0762 8.18116 14.1107 8.00594 14.1107C7.83072 14.1107 7.65721 14.0762 7.49535 14.0091C7.33349 13.942 7.18643 13.8436 7.0626 13.7197L1.33594 7.99968V1.33301H8.0026L13.7293 7.05968C13.9776 7.30949 14.117 7.64743 14.117 7.99968C14.117 8.35192 13.9776 8.68986 13.7293 8.93968Z"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 4.66699H4.67295" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+        
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NovaFlow - a project management ...</td>
+                                <td>SAAS</td>
+                                <td>18-03-2022</td>
+                                <td>45 $</td>
+                                <td>
+                                    <div class="buttons-wrapper">
+                                        <button>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 6.66699L7.9974 10.0003L11.3307 6.66699" stroke="#425466"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="tag">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.7293 8.93968L8.94927 13.7197C8.82544 13.8436 8.67839 13.942 8.51652 14.0091C8.35466 14.0762 8.18116 14.1107 8.00594 14.1107C7.83072 14.1107 7.65721 14.0762 7.49535 14.0091C7.33349 13.942 7.18643 13.8436 7.0626 13.7197L1.33594 7.99968V1.33301H8.0026L13.7293 7.05968C13.9776 7.30949 14.117 7.64743 14.117 7.99968C14.117 8.35192 13.9776 8.68986 13.7293 8.93968Z"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 4.66699H4.67295" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+        
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>NovaFlow - a project management ...</td>
+                                <td>SAAS</td>
+                                <td>18-03-2022</td>
+                                <td>45 $</td>
+                                <td>
+                                    <div class="buttons-wrapper">
+                                        <button>
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M14 10V12.6667C14 13.0203 13.8595 13.3594 13.6095 13.6095C13.3594 13.8595 13.0203 14 12.6667 14H3.33333C2.97971 14 2.64057 13.8595 2.39052 13.6095C2.14048 13.3594 2 13.0203 2 12.6667V10"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 6.66699L7.9974 10.0003L11.3307 6.66699" stroke="#425466"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M8 10V2" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button class="tag">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M13.7293 8.93968L8.94927 13.7197C8.82544 13.8436 8.67839 13.942 8.51652 14.0091C8.35466 14.0762 8.18116 14.1107 8.00594 14.1107C7.83072 14.1107 7.65721 14.0762 7.49535 14.0091C7.33349 13.942 7.18643 13.8436 7.0626 13.7197L1.33594 7.99968V1.33301H8.0026L13.7293 7.05968C13.9776 7.30949 14.117 7.64743 14.117 7.99968C14.117 8.35192 13.9776 8.68986 13.7293 8.93968Z"
+                                                    stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.66406 4.66699H4.67295" stroke="#425466" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+        
+                                        </button>
+                                    </div>
+                                </td>
+                            </tr>
+        
+                        </tbody>
+                    </table>
+        
+        
+        
+                </div>
+                <!-- pagination  -->
+                <div class="table-pagination">
+                    <a href="#" class="prev">
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 9L1 5L5 1" stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <a href="#" class="page active">1</a>
+                    <a href="#" class="page">2</a>
+                    <a href="#" class="page">3</a>
+                    <a href="#" class="next">
+                        <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 9L5 5L1 1" stroke="#425466" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <!-- FOOTER-SECTION START -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4 col-md-6">
+          <div class="footer-details">
+            <figure class="logo">
+              <img src="../assets/images/logo/logo.svg" alt="brand-logo">
+            </figure>
+
+            <form class="needs-validation" novalidate>
+              <div class="newsletter has-validation">
+                <div class="inputbox">
+                  <input id="newsletteremail" type="email" class="form-control" placeholder="E-mail" required autocomplete="off">
+                  <div class="valid-feedback">
+                    Looks good!
+                  </div>
+                  <div class="invalid-feedback">
+                    Please give a valid email.
+                  </div>
+                </div>
+
+                <div class="submitbox">
+                  <button class="btn-subscribe" type="submit">Subscribe</button>
+                </div>
+              </div>
+            </form>
+
+            <figure class="basisthumb">
+              <img src="../assets/images/brands/basis.svg" alt="basis-logo">
+            </figure>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 text-center text-md-end text-lg-start">
+          <div class="footer-info">
+            <h3 class="title">Company</h3>
+
+            <ul class="footerlist">
+              <li class="footerlist-item">
+                <a href="../.about.html" class="footerlist-link">About us</a>
+              </li>
+              <li class="footerlist-item">
+                <a href="../support.html" class="footerlist-link">Support</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 text-center text-md-start">
+          <div class="footer-info">
+            <h3 class="title">Products</h3>
+
+            <ul class="footerlist">
+              <li class="footerlist-item">
+                <a href="#" class="footerlist-link">Product name one</a>
+              </li>
+              <li class="footerlist-item">
+                <a href="#" class="footerlist-link">Product name two</a>
+              </li>
+              <li class="footerlist-item">
+                <a href="#" class="footerlist-link">Product name three</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 text-center text-md-end text-lg-start">
+          <div class="footer-info">
+            <h3 class="title">Terms</h3>
+
+            <ul class="footerlist">
+              <li class="footerlist-item">
+                <a href="#" class="footerlist-link">Terms & Conditions</a>
+              </li>
+              <li class="footerlist-item">
+                <a href="#" class="footerlist-link">Privacy Policy</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-12">
+          <div class="d-flex align-items-center justify-content-center text-center pt-5">
+            <p class="copyright">&copy; <span id="copyrightyear"></span> Qtec. All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- FOOTER-SECTION END -->
+
+    
+  <!-- opening ticket modal  -->
+  <div class="modal fade " id="openingTicket" tabindex="-1" aria-labelledby="openingTicketLabel" aria-hidden="true" >
+    <div class="modal-dialog">
+
+      <div class="modal-content ">
+        <form class="supportform">
+            <div class="supportform-header">
+                <h3 class="title">Support Ticket</h3>
+            </div>
+            <div class="supportform-body">
+                <div class="form-group">
+                    <label for="productName" class="form-label">Product Name</label>
+                    <input type="text" class="form-control" id="productName" placeholder="Cybershield">
+                 </div>
+                <div class="form-group">
+                    <label for="productType" class="form-label">Product type</label>
+                    <input type="text" class="form-control" id="productType" placeholder="Product type ">
+                 </div>
+                <div class="form-group">
+                    <label for="message" class="form-label" >Message</label>
+                    <textarea name="" rows="8" id="message" placeholder="write message here" class="form-control"></textarea>
+                 </div>
+                 <button class="update-btn w-100">Send</button>
+            </div>
+        </form>
+
+      </div>
+
+      
+    </div>
+  </div>
+
+  <!-- PAGINATION INTERNAL SCRIPT -->
+  <script>
+    const pagination = document.querySelector('.table-pagination');
+    const prevBtn = pagination.querySelector('.prev');
+    const nextBtn = pagination.querySelector('.next');
+    const pages = pagination.querySelectorAll('.page');
+
+    let currentPage = 1;
+
+    function setActivePage(pageNumber) {
+    pages.forEach(page => page.classList.remove('active'));
+    pages[pageNumber - 1].classList.add('active');
+    }
+
+    function prevPage() {
+    if (currentPage > 1) {
+        currentPage--;
+        setActivePage(currentPage);
+    }
+    }
+
+    function nextPage() {
+    if (currentPage < pages.length) {
+        currentPage++;
+        setActivePage(currentPage);
+    }
+    }
+
+    prevBtn.addEventListener('click', prevPage);
+    nextBtn.addEventListener('click', nextPage);
+
+    pages.forEach((page, index) => {
+    page.addEventListener('click', () => {
+        currentPage = index + 1;
+        setActivePage(currentPage);
+    });
+    });
+
+  </script>
+  
+  <!-- BOOTSTRAP JS (5.3) -->
+  <script src="../assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- BOOTSTRAP-TOOLTIP -->
+  <script src="../assets/js/tooltip/tooltip.js"></script>
+  <!-- BACK-TOP JS -->
+  <script src="../assets/js/back-top/backToTop.js"></script>
+  <script src="../assets/js/back-top/backtop.js"></script>
+  <!-- COPYRIGHT JS -->
+  <script src="../assets/js/copyright/copyright.js"></script>
+ 
+</body>
+</html>

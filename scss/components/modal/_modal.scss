@@ -5,6 +5,7 @@
   &-content {
     @include radius(8);
     // box-shadow: $modalshadow;
+    border: none;
   }
 
   &-header {
@@ -31,5 +32,32 @@
         }
       }
     }
+  }
+}
+
+.supportform {
+  @include flex-column;
+  gap: size(24);
+  padding: size(20);
+  @include breakpoint(mobile576) {
+    padding: size(30) size(30);
+    
+  }
+  @include breakpoint(mobile576) {
+    padding: size(38) size(50);
+    
+  }
+  &-header {
+    @include border-single(bottom,solid,1,#DDE4E9);
+    padding-bottom: size(20);
+    .title {
+      color: $headingcolor;
+      @include font($primaryFont,18,semibold,normal,27);
+      
+    }
+  }
+  &-body {
+    @include flex-column;
+    gap: size(24);
   }
 }

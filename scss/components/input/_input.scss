@@ -8,3 +8,57 @@
     box-shadow: none;
   }
 }
+
+.form-group {
+  position: relative;
+  .form-label {
+    @include font($primaryFont,14,semibold,normal,20);
+    color: $labeltext;
+    
+  }
+  .form-control {
+    color: $textplaceholder-2;
+    @include font($primaryFont,14,normal,normal,20);
+    @include radius(6);
+    @include transitionsall;
+    padding: size(9) size(10);
+   &:focus {
+
+    }
+    &::placeholder {
+      color: $textplaceholder-2;
+     @include font($primaryFont,14,normal,normal,20);
+    }
+
+  }
+  .show-hide {
+    position: absolute;
+    right: size(4);
+    top: 53%;
+    cursor: pointer;
+  }
+}
+
+.input_container {
+  border: 1px solid  #E2E8F0;
+  padding: size(4) size(8);
+  @include radius(6);
+  
+}
+
+input[type=file]::file-selector-button {
+  background: linear-gradient(151.47deg, #02D7F8 9.01%, #0876FC 84.28%);
+  color: $white;
+  border: 0px;
+  border-right: 1px solid #e5e5e5;
+  padding: 2px 10px;
+  margin-right: 20px;
+  transition: .5s;
+  @include radius(5);
+}
+
+input[type=file]::file-selector-button:hover {
+  background-color: #eee;
+  border: 0px;
+  border-right: 1px solid #e5e5e5;
+}

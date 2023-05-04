@@ -1,0 +1,73 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.myAccount {
+    padding: size(30) size(0);
+    padding-bottom: size(100);
+    &-content {
+        @include flex;
+        flex-direction: column;
+        gap: size(24);
+        position: sticky;
+        top: 0;
+        @include breakpoint(tab992) {
+            flex-direction: row;
+        }
+    }
+    &-sidebar {
+        background: $white;
+        padding: size(20) size(0);
+        @include radius(8);
+        padding-left: size(16);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+       @include breakpoint(tab992) {
+        width: size(224);
+       }
+       
+
+        
+    }
+    &-details {
+        background-color: $white;
+        @include radius(8);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
+        flex: 1;
+        padding: size(30) size(30);
+        @include breakpoint(mobile576) {
+            padding: size(40) size(50);
+        }
+        
+    }
+}
+.userInfo {
+    @include flex;
+    align-items: center;
+    gap: size(14);
+    padding-bottom: size(30);
+}
+
+.sidebarMenu{
+     @include list-vertical;
+     position: sticky;
+     top: size(120);
+    &-item {
+       
+    }
+    &-link {
+        padding: size(8) size(20);
+        color: $gray-600;
+        display: block;
+        &.active {
+            color: $headingcolor;
+        }
+    }
+}
+.change-pass-text {
+    color: $headingcolor;
+    @include font($primaryFont,16,semibold,normal,24);
+    padding: size(30) size(0);
+    @include breakpoint(mobile576) {
+        padding: size(50) size(0);
+    }
+    
+}
