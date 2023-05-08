@@ -22,6 +22,7 @@
     @include radius(6);
     @include transitionsall;
     padding: size(9) size(10);
+    color: $gray-700;
     &:focus {
 
       }
@@ -71,3 +72,43 @@ input[type=file]::file-selector-button:hover {
   border: 0px;
   border-right: 1px solid #e5e5e5;
 }
+
+// Styling for the OTP container
+.otp-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  .filled {
+    border-color: #2A374E !important;
+  }
+
+  input[type="text"] {
+    color: transparent;
+    text-shadow: 0 0 0 #2A374E;
+    width: size(54);
+    text-align: center;
+    font-size: 24px;
+    margin: 0 5px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    outline: none;
+    transition: border-color 0.3s;
+    background: transparent;
+    padding-bottom: size(8);
+    @include font($primaryFont, 32, semibold, normal, 50);
+
+    &:focus {
+      border-color: $buttonbg;
+    }
+  }
+}
+.form-control.is-valid:focus, .was-validated .form-control:valid:focus {
+  box-shadow: none;
+}
+.form-control.is-invalid:focus, .was-validated .form-control:invalid:focus {
+  box-shadow: none;
+}
+
+
+

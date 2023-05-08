@@ -13,8 +13,17 @@
         event.stopPropagation()
       }
 
+      // Check if any required field is empty
+      const requiredFields = form.querySelectorAll('[required]')
+      Array.from(requiredFields).forEach(field => {
+        if (field.value.trim() === '') {
+          event.preventDefault()
+          event.stopPropagation()
+          field.classList.add('is-invalid')
+        }
+      })
+
       form.classList.add('was-validated')
     }, false)
   })
-
 })()
