@@ -1,2 +1,42 @@
 @use "../global" as *;
 @use "../partials" as *;
+.servicesHero {
+    padding: size(30) size(0);
+    @include breakpoint(tab992) {
+        padding: size(60) size(0);
+    }
+    &-content {
+        @include flex-column;
+        gap: size(30);
+        align-items: center;
+        text-align: center;
+        @include breakpoint(tab992) {
+            gap: size(50);
+        }
+    }
+    &-header {
+        @include flex-column;
+        gap: size(14);
+    }
+
+    &-title {
+        color:  #2A374E;
+        font-weight: 600;
+    }
+
+    &-des {
+
+    }
+
+    &-thumb {
+        max-width: size(960);
+        margin: auto;
+        img {
+            @include wh100;
+            object-fit: cover;
+        }
+    }
+}
+.services {
+    padding-bottom: size(100);
+}

@@ -488,3 +488,38 @@ height: size(326);
   }
 
 }
+.cardService {
+  background: $white;
+  padding: size(40);
+  @include flex-column;
+  gap: size(16);
+  @include transitiontransform;
+  &-icon {
+    @include square(48);
+    @include transitiontransform;
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+  &-title {
+    color: #4A5568;
+    @include font($primaryFont, 20, semibold, normal, 28);
+  }
+  &-text {
+    padding-top: size(6);
+    padding-bottom: size(20);
+    color: $gray-600;
+    @include font($primaryFont, 16, normal, normal, 30);
+  }
+  
+  @include hover {
+    transform: translateY(size(-8));
+    .cardService-icon {
+      transform: rotate(20deg);
+    }
+
+  }
+  
+
+}

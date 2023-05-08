@@ -38,8 +38,13 @@
         @include flex-column;
         gap: size(20);
         align-items: center;
+        
         @include breakpoint(mobile576) {
             align-items: flex-start;
+        }
+        @include breakpoint(tab992) {
+            padding-left: size(90);
+
         }
         
         @include breakpoint(mobile576) {
