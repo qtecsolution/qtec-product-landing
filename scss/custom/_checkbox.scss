@@ -1,2 +1,62 @@
 @use "../global" as *;
 @use "../partials" as *;
+
+.customcheck{
+    &-box{
+      &:checked ~ .customcheck-label{
+        &::before{
+          background: $buttonbg;
+          border: 1px solid #E2E8F0;
+          
+  
+        }
+        &::after{
+          opacity: 1;
+          visibility: visible;
+        }    
+      }
+    }
+    &-label{
+      position: relative;
+      color: $labeltext;
+      padding-left: size(30);
+      cursor: pointer;
+      @include font($primaryFont,14,normal,normal,20);
+      a {
+        color: $buttonbg;
+        @include hover {
+            text-decoration: underline;
+        }
+    }
+      &::before,
+      &::after{
+        content: '';
+        @include absolute(top 50% left 0);
+      }
+      &::before{
+        @include square(20);
+        @include radius(4);
+        @include border(solid, 1, #E2E8F0);
+        @include translateY(-50%);
+        @include transitionsall;
+  
+  
+      }
+      &::after{
+        width: size(6);
+        height: size(12);
+        @include border(solid ,2,$white);
+        border-top: 0;
+        border-left: 0;
+        left: size(7);
+        @include transform(translateY(-70%) rotate(45deg));
+        opacity: 0;
+        visibility: hidden;
+        @include transitionsall;
+  
+      }
+      &::selection{
+        @include setBgColor(transparent,$black)
+      }
+    }
+  }

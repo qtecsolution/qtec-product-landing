@@ -1,0 +1,79 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.authentications {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 100vh;
+  padding: size(14);
+  overflow-y: auto; /* Added */
+
+  @include breakpoint(tab992) {
+    flex-direction: row;
+    padding: size(34);
+  }
+
+  .left-content,
+  .right-content {
+    padding: 20px;
+    width: 100%;
+
+    @include breakpoint(tab992) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  .left-content {
+    background: #ECF4FF;
+    display: flex;
+    justify-content: center;
+    @include radius(8);
+    
+    height: 100%;
+
+    figure {
+      height: 100%;
+      @include flex-center;
+      overflow: hidden;
+      
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+.authentication-form {
+    @include flex-column;
+    gap: size(40);
+    @include breakpoint(tab992) {
+        gap: size(60);
+    }
+    &-header {
+        @include flex-column;
+        gap: size(8);
+        .form-title {
+            color: $headingcolor;
+            font-weight: 600;
+        }
+        .form-des {
+           
+        }
+
+    }
+    &-footer {
+        text-align: center;
+        p {
+            color: #425466;
+        }
+        a {
+            color: $buttonbg;
+            @include hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}

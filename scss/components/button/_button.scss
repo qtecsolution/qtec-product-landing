@@ -110,6 +110,7 @@ button,
   }
 
 }
+
 .update-btn {
   padding: size(12) size(24);
   @include radius(8);
@@ -129,4 +130,37 @@ button,
     background-position: 50% 50%;
     background-size: 100% 500%;
   }
+}
+
+.google-btn {
+  padding: size(12) size(24);
+  @include radius(8);
+  background:$googlebg;
+  border-radius: 8px;
+  border: transparent;
+  color: $white;
+  font-weight: 700;
+  @include flex;
+  gap: size(10);
+  align-items: center;
+  justify-content: center;
+  @include transitionsall;
+
+  @include hover {
+   background: darken($googlebg,10%);
+  }
+}
+.create-account-btn {
+  padding: size(12) size(24);
+  @include radius(8);
+  background:$buttonbg;
+  border-radius: 8px;
+  border: transparent;
+  color: $white;
+  font-weight: 700;
+  @include transitionsall;
+
+  @include hover {
+    background: darken($buttonbg,10%);
+   }
 }
