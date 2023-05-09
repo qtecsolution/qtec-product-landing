@@ -68,6 +68,8 @@
   }
   .right-menu {
     @include flex;
+    align-items: center;
+    gap: size(20);
     .header-user {
       @include flex;
       align-items: center;
@@ -85,6 +87,23 @@
       overflow: hidden;
       img {
         @include wh100;
+      }
+    }
+    .signin-lignk {
+      color: $headingcolor;
+      font-size: size(14);
+      font-weight: 700;
+      padding: size(20) size(0);
+      letter-spacing: size(1.6);
+      text-transform: uppercase;
+      @include transitionscolor;
+
+      &:hover:not(.active) {
+        color: $buttonbg;
+      }
+
+      &.active {
+        color: $buttonbg;
       }
     }
   }
