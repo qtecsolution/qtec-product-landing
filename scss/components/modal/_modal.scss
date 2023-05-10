@@ -167,11 +167,118 @@
   .total {
     @include flex-between;
     @include border-single(bottom,dashed,2,#DDE4E9);
-    padding-bottom: size(8);
+    padding-bottom: size(20);
     &-price,
     &-title {
       @include font($primaryFont, 14, semibold, normal, 20);
       color: $labeltext;
     }
   }
+  .payment {
+    @include flex-column;
+    padding-top: size(14);
+    gap: size(20);
+    &-header {
+      .payment-title {
+        @include font($primaryFont, 14, semibold, normal, 20);
+        color: $labeltext;
+      }
+    }
+
+  }
+  .payment-methods {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 10px;
+    
+    .payment-method {
+      display: flex;
+      align-items: center;
+      padding: 16px;
+      border-radius: 8px;
+      border: 1px solid #DDE4E9;
+     height: size(80);
+     width: size(98);
+     position: relative;
+     @include transitionsall;
+     cursor: pointer;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+      
+      &:hover {
+        cursor: pointer;
+      }
+      
+      &.selected {
+        border: 1px solid #0876FC ;
+        
+        .method-radio {
+          border-color: #0876FC ;
+          
+          &::before {
+            background-color: #0876FC;
+            border-color: red;
+          }
+        }
+      }
+      
+      input[type="radio"] {
+        display: none;
+      }
+      
+      .method-radio {
+       @include square(16);
+        border-radius: 50%;
+        border: 2px solid #DDE4E9;
+        background: #DDE4E9;
+        position: absolute;
+        top: size(6);
+        right: size(6); 
+        @include transitionsall;
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+         @include square(8);
+          border-radius: 50%;
+          background-color: transparent;
+          @include transitionsall;
+        }
+      }
+      
+      .method-content {
+     
+        
+        img {
+          margin-right: 8px;
+        }
+      }
+    }
+  }
+  .success-wrapper {
+    @include flex-column;
+    align-items: center;
+    text-align: center;
+    padding: size(20) size(0);
+    gap: size(20);
+    .success-content {
+      @include flex-column;
+      gap: size(10);
+      .success-title {
+        color: $labeltext;
+        @include font($primaryFont, 14, semibold, normal, 20);
+      }
+      .success-text {
+        color: $labeltext;
+        @include font($primaryFont, 12, normal, normal, 16);
+      }
+    }
+  }
+  
 }
