@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modal </title>
+  <!-- FAVICON ICON -->
+  <link rel="shortcut icon" href="../assets/images/logo/logo.svg" type="image/svg+xml">
+  <!-- BACK-TOP CSS -->
+  <link rel="stylesheet" href="../assets/css/back-top/backToTop.css">
+  <!-- BOOTSTRAP CSS (5.3) -->
+  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
+  <!-- APP-CSS -->
+  <link rel="stylesheet" href="../assets/css/style.min.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="error-wrapper">
+        <figure>
+            <img src="assets/images/404/404.svg" alt="404">
+        </figure>
+    </div>
+   
+  </div>
+  <!-- BOOTSTRAP JS (5.3) -->
+  <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <!-- BOOTSTRAP-TOOLTIP -->
+  <script src="assets/js/tooltip/tooltip.js"></script>
+  <!-- BACK-TOP JS -->
+  <script src="assets/js/back-top/backToTop.js"></script>
+  <script src="assets/js/back-top/backtop.js"></script>
+  <!-- COPYRIGHT JS -->
+  <script src="assets/js/copyright/copyright.js"></script>
+  <!-- CHECKBOX JS -->
+  <script src="/assets/js/checkbox/checkbox.js"></script>
+  <script>
+    // Test payment method radio working 
+    const paymentMethodDivs = document.querySelectorAll('.payment-method');
+
+    paymentMethodDivs.forEach(paymentMethodDiv => {
+      paymentMethodDiv.addEventListener('click', () => {
+        const input = paymentMethodDiv.querySelector('input[type="radio"]');
+        if (input) {
+          input.checked = true;
+          alert(`You have selected ${input.id}`);
+        }
+      });
+    });
+
+
+  </script>
+</body>
+
+</html>

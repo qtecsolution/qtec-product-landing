@@ -1,0 +1,15 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.error-wrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    figure {
+        img {
+            @include wh100;
+            margin: auto;
+        }
+    }
+}
