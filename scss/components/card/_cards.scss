@@ -371,9 +371,9 @@ height: size(326);
   .featured-content {
     background: $white;
     position: absolute;
-    bottom: size(-56); 
+    bottom: size(-100); 
     @include transitionsall;
-    height: size(154);
+    height: size(194);
     @include w100; 
     @include flex-column;
     gap: size(10);
@@ -389,19 +389,30 @@ height: size(326);
     }
 
     .top-content {
-     @include flex-between;
+     @include flex;
+     flex-direction: column-reverse;
+      
      align-items: flex-start;
-     gap: size(50);
+     
 
     }
 
     &-title {
       @include font($primaryFont,20,semibold,normal,30);
       color: $gray-700;
+      display: -webkit-box;
+      -webkit-line-clamp: 1;
+      -webkit-box-orient: vertical;  
+      overflow: hidden;
+
+       
     }
     &-text {
       color: $gray-700;
       @include line-clamp;
+      &.less {
+        min-height: 40px;
+      }
 
     }
     &-price {
@@ -423,10 +434,10 @@ height: size(326);
 
   @include hover {
     .featured-content {
-      bottom: 0;
+      bottom: 0px;
     }
     .featured-thumb {
-      transform: scale(.98);
+      // transform: scale(.98);
     }
   }
 }
